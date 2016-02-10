@@ -1,0 +1,11 @@
+machine:
+  python:
+    version: 2.7.10
+
+dependencies:
+  override:
+    - pip install requests
+
+test:
+  override:
+    - python testbench-client.py --url https://github.com/ARMmbed/mbed-drivers.git --target frdm-k64f-gcc --commands '["mbedgt --target=frdm-k64f-gcc --test-by-names=mbed-drivers-test-cstring"]'
