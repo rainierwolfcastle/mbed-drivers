@@ -8,4 +8,4 @@ dependencies:
 
 test:
   override:
-    - python testbench-client.py --url https://github.com/ARMmbed/mbed-drivers.git --target frdm-k64f-gcc --commands '["mbedgt --target=frdm-k64f-gcc --test-by-names=mbed-drivers-test-cstring"]'
+    - python testbench-client.py --url https://github.com/ARMmbed/mbed-drivers.git --target frdm-k64f-gcc --commands '["yt target frdm-k64f-gcc", "yt build", "mbedgt --target=frdm-k64f-gcc"]'
