@@ -7,5 +7,7 @@ dependencies:
     - pip install requests
 
 test:
+  pre:
+    - git clone https://rainierwolfcastle:$GITHUB_PAT@github.com/ARMmbed/testbench-client.git
   override:
-    - python client.py --url https://github.com/ARMmbed/mbed-drivers.git --target frdm-k64f-gcc --commands '["mbedgt --target=frdm-k64f-gcc"]'
+    - python testbench-client/client.py --url https://github.com/ARMmbed/mbed-drivers.git --target frdm-k64f-gcc --commands '["mbedgt --target=frdm-k64f-gcc"]'
