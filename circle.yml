@@ -10,4 +10,4 @@ test:
   pre:
     - git clone https://rainierwolfcastle:$GITHUB_PAT@github.com/ARMmbed/testbench-client.git
   override:
-    - python testbench-client/client.py --url https://github.com/ARMmbed/mbed-drivers.git --target frdm-k64f-gcc --commands '["mbedgt --target=frdm-k64f-gcc --report-junit='"$CIRCLE_TEST_REPORTS"'/output.xml --test-by-names=mbed-drivers-test-detect"]'
+    - python testbench-client/client.py --url https://github.com/ARMmbed/mbed-drivers.git --target frdm-k64f-gcc --commands '["mbedgt --target=frdm-k64f-gcc"]'
